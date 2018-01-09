@@ -1,0 +1,108 @@
+@import '../sass/variables';
+@import '../sass/mixins';
+
+.base {
+    font-family: 'Roboto-Slab', serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    //background-color: $color-body;
+    background-image: url('../assets/img/f.png');
+    @include bp-small {
+        font-size: 20px;
+    }
+    @include bp-medium {
+        font-size: 25px;
+        flex-direction: row;
+    }
+    @include bp-large {
+
+    }
+
+    &-navbar {
+        z-index: 1;
+        flex-basis: 10%;
+        order: 1;
+        box-shadow: $container-shadow-bot;
+        transform: translateY(-100px);
+        @include animation('slide-bars-y-down .8s .5s ease-in forwards');
+
+        @include bp-small {
+            
+        }
+        @include bp-medium {
+            transform: translateX(-100px);
+            margin: 0;
+            flex-basis: 5%;
+            transform-origin:top;
+            @include animation('slide-bars-x 1s ease-in forwards');
+        }
+    }
+    &-topbar {
+        display: block;
+        flex-basis: 10%;
+        order: 3;
+        box-shadow: $container-shadow-top;
+        transform: translateY(100px);
+        @include animation('slide-bars-y-up .8s 1s ease-in forwards');
+        @include bp-small {
+
+        }
+        @include bp-medium {
+            margin: 0;
+            position: absolute;
+            width: 100%;
+            height: $topbarheight;
+            box-shadow: $container-shadow-bot;
+            flex-basis: 5%;
+            transform: translateY(-100px);
+            @include animation('slide-bars-y-down 1s 1s ease-in forwards');
+        }
+    }
+    &-main {
+        order: 2;
+        flex-grow: 1;
+        margin: 20px 0;
+        opacity: 0;
+        box-shadow: $container-shadow-bot;
+        background-color: $color-main-light;
+        @include animation('slide-down 1s 2s forwards');
+        @include bp-small {
+            margin: 20px;
+        }
+        @include bp-medium {
+            margin: 160px 10% 70px 10%; //piksele przeliczone z topbarem
+        }
+    }
+}
+
+@include keyframes(slide-down) {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+@include keyframes(slide-bars-x) {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(0) }
+}
+@include keyframes(slide-bars-y-down) {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(0) }
+}
+
+@include keyframes(slide-bars-y-up) {
+    0% { transform: translateY(100px); }
+    100% { transform: translateY(0) }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+  }
+  
+  @mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+  }
+
+  @mixin bp-xlarge {
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+
+  @mixin bp-large {
+    @media only screen and (min-width: 1224px) {
+      @content;
+    }
+  }
+  
+  @mixin bp-medium {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin bp-small {
+    @media only screen and (min-width: 400px) {
+      @content;
+    }
+  }
+
+  @mixin zero-padding-margin {
+      padding: 0;
+      margin: 0;
+  }
+
+
+  @mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+  }
+
+
+  %visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+  }
+
+
+  

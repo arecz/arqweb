@@ -1,0 +1,32 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.navbar{
+    font-family: 'Lato';
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    order: 1;
+    background-color: $color-main-dark;
+    color: #FFFFFF;
+    @include bp-medium {
+        flex-direction: column
+    }
+
+    &-container {
+        flex-basis: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @include bp-medium {
+            flex-basis: 50%;
+            flex-direction: column;
+            width: 100%;
+        }
+        &-icon {
+            font-size: 2.4rem;
+            color: $color-main-light;
+        }
+    }   
+}

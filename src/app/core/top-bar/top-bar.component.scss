@@ -1,0 +1,23 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.topbar {
+    font-size: 1rem;
+    display: flex;
+    color: white;
+    font-family: 'Roboto-Slab';
+    height: 100%;
+    background-color: $color-main-dark;
+    order: 3;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+    @include bp-medium {
+        justify-content: flex-end;
+        font-size: 1.8rem;
+    }
+
+    &-brand {
+
+    }
+}
