@@ -1,0 +1,15 @@
+<div class="mywork">
+  <p class="mywork-header">Moje Prace:</p>
+  <div class="mywork-container">
+    <div *ngFor="let item of myWorks" class="mywork-container-element" [style.backgroundImage]="'url('+ item.image +')'">
+      <div class="mywork-container-element-fade">
+        <p class="mywork-container-element-fade-header">{{item.name}}</p>
+
+        <p class="mywork-container-element-fade-content">{{item.description}}</p>
+
+      </div>
+    </div>
+      
+    </div>
+  </div>
+

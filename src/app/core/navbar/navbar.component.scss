@@ -2,31 +2,72 @@
 @import '../../../sass/mixins';
 
 .navbar{
-    font-family: 'Lato';
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     order: 1;
     background-color: $color-main-dark;
+    padding: 1rem 0;
     color: #FFFFFF;
-    @include bp-medium {
-        flex-direction: column
+    @include bp-large {
+        flex-direction: column;
+        padding: 0 1.6rem;
+    }
+
+    &-brand {
+        display: none;
+        width: 100px;
+        height: 50px;
+        background: $logo-light no-repeat center center;
+        background-size: contain;
+        @include bp-small { 
+        }
+        @include bp-large {
+            display: block;
+            position: absolute;
+            top: 1rem;  
+        }
+        
     }
 
     &-container {
-        flex-basis: 70%;
+        
+        flex-basis: 90%;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        @include bp-medium {
+        @include bp-small {
+            flex-basis: 70%;
+        }
+        @include bp-large {
             flex-basis: 50%;
             flex-direction: column;
             width: 100%;
         }
         &-icon {
+            outline: none;
+            opacity: 0.4;
             font-size: 2.4rem;
             color: $color-main-light;
+            transition: opacity .5s;
+            &:hover {
+                opacity: 1;
+            }
         }
     }   
+}
+
+.rotate {
+    @include animation('rotate 5s 1s infinite')
+}
+
+@include keyframes(rotate) {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
 }

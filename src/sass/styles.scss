@@ -1,8 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,400&amp;subset=latin-ext);
 @import './variables';
 @import './mixins';
 
 html, body {
     width: 100%;
     height: 100%;
+    background-image: url('../assets/img/f.png');
     
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(88, 88, 88, 0), rgba(88, 88, 88, 0.75), rgba(88, 88, 88, 0));
 }
