@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { fadeInShortAnimation } from '../../_animations/fade-in-short.animation';
 import { fadeInAnimation } from '../../_animations/fade-in.animation';
 import { fadeInLongAnimation } from '../../_animations/fade-in-long.animation';
+import { zoomInLongAnimation } from '../../_animations/zoom-in-long.animation';
+
 
 @Component({
   selector: 'app-opinions',
   templateUrl: './opinions.component.html',
   styleUrls: ['./opinions.component.scss'],
-  animations: [fadeInShortAnimation, fadeInAnimation, fadeInLongAnimation]
+  animations: [fadeInShortAnimation, fadeInAnimation, fadeInLongAnimation, zoomInLongAnimation]
 })
 export class OpinionsComponent implements OnInit {
 

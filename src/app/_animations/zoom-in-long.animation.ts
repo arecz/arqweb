@@ -6,7 +6,7 @@ export const zoomInLongAnimation =
 
 
        transition(':enter', [
-           style({ transform: 'scale(0.8)' }),
-           animate('.7s 1400ms ease-in', style({  transform: 'scale(1)' }))
+           style({ transform: 'scale(0.9)' }),
+           animate('.7s 1400ms ease-in-out', style({  transform: 'scale(1)' }))
        ]),
    ]);

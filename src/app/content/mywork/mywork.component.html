@@ -1,4 +1,4 @@
-<div class="mywork">
+<div class="mywork" [@zoomInAnimation]>
   <p class="mywork-header light" [@fadeInShortAnimation]>Moje Prace:</p>
   <div class="mywork-container" [@fadeInAnimation]>
     <div *ngFor="let item of myWorks" class="mywork-container-element" [style.backgroundImage]="'url('+ item.image +')'">

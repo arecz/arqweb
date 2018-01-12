@@ -42,7 +42,7 @@
                 margin: 0;
                 padding: 1rem 1.6rem;
                 text-align: justify;
-                text-align-last: center;
+                text-align-last: left;
                 @include bp-medium {
                     padding: 1rem 5rem; 
                 }
@@ -99,7 +99,7 @@
 
         &-subheader {
             text-align: justify;
-            text-align-last: center;
+            text-align-last: left;
             width: 70%;
             margin: 0 auto;
         }
@@ -127,7 +127,9 @@
                 color: white;
                 box-shadow: $container-shadow-bot;
                 text-align: center;
-                padding: .5rem 0;
+                padding: .2rem .7rem;
+                font-size: 1rem;
+                text-align: left;
                 background-color: $color-main-dark;
             }
 

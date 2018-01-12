@@ -30,6 +30,7 @@ button {
     outline: none;
     border: 0;
     color: white;
+    transition: background-color .5s;
 }
 
 .small {
@@ -40,4 +41,12 @@ button {
         margin: 2rem auto;
     }
 
+}
+
+.valid {
+    background-color: #2ecc71;
+}
+
+.invalid {
+    background-color: #e74c3c;
 }
