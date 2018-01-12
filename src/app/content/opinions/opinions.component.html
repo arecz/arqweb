@@ -1,3 +1,25 @@
-<p>
-  opinions works!
-</p>
+<div class="opinions">
+  <div class="opinions-box small">
+    
+    <div class ="opinions-box-quote shadow light" [@fadeInShortAnimation]>
+        <h3 class="opinions-box-header">Opinie:</h3>
+      <em class="opinions-box-quote-text">"{{opinions[currentId].quote}}"</em>
+    </div>
+  </div>
+
+  <div class="opinions-box" [@fadeInAnimation]>
+
+    <div class="opinions-box-author shadow light">
+        
+      <div class="opinions-box-author-image" [style.backgroundImage]="'url('+ opinions[currentId].image +')'">
+          
+      </div>
+      <div class="opinions-box-author-name">
+          {{opinions[currentId].name}}
+      </div>
+    </div>
+    <div class="opinions-box-next shadow light" [@fadeInLongAnimation]>
+        <i class="fa fa-angle-double-right fa-5x" aria-hidden="true" (click)="onArrowClick()"></i>
+    </div>
+  </div>
+</div>

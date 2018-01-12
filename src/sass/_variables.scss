@@ -5,6 +5,7 @@ $breakpoint-desktop: "all and (min-width: 1750px)";
 
 $color-main-dark: #7C4DFF;
 $color-main-light: #D1C4E9;
+$color-main-extra-light: #E2D5FA;
 $color-text: #212121;
 $color-accent: #34495e;
 $color-body: #2c3e50;
@@ -14,5 +15,8 @@ $container-shadow-top:  0 -3px 8px 0 rgba(0, 0, 0, 0.2), 0 -5px 20px 0 rgba(0, 0
 
 $logo-dark: url('../../../assets/img/logo-dark.png');
 $logo-light: url('../../../assets/img/pink.png');
+
+$background-work: url('../../../assets/img/math.png');
+$background-base: url('../../../assets/img/f.png');
 
 $topbarheight: 90px;

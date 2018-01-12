@@ -1,13 +1,13 @@
 <div class="mywork">
-  <p class="mywork-header">Moje Prace:</p>
-  <div class="mywork-container">
+  <p class="mywork-header light" [@fadeInShortAnimation]>Moje Prace:</p>
+  <div class="mywork-container" [@fadeInAnimation]>
     <div *ngFor="let item of myWorks" class="mywork-container-element" [style.backgroundImage]="'url('+ item.image +')'">
-      <div class="mywork-container-element-fade">
+      <a class="mywork-container-element-fade" [href]="item.link" target="_blank">
         <p class="mywork-container-element-fade-header">{{item.name}}</p>
 
         <p class="mywork-container-element-fade-content">{{item.description}}</p>
 
-      </div>
+      </a>
     </div>
       
     </div>

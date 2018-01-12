@@ -1,0 +1,43 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.first {
+    order: -1
+}
+.last {
+    order: 1
+}
+
+.contact-box {
+    padding-bottom: 2rem;
+    @include bp-large {
+        padding-bottom: 0rem;
+    }
+}
+
+.textarea {
+    flex-basis: 180px;
+    resize: none;
+    padding: .5rem;
+    font-size: .9rem;
+}
+
+button {
+    width: 40%;
+    padding: 1.4rem 0;
+    margin: 2rem auto 0;
+    background-color: $color-main-dark;
+    outline: none;
+    border: 0;
+    color: white;
+}
+
+.small {
+    width: 100%;
+    
+    @include bp-medium {
+        width: 50%;
+        margin: 2rem auto;
+    }
+
+}

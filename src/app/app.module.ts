@@ -14,6 +14,7 @@ import { OpinionsComponent } from './content/opinions/opinions.component';
 import { MyworkComponent } from './content/mywork/mywork.component';
 import { ContactComponent } from './content/contact/contact.component';
 import { AboutComponent } from './content/about/about.component';
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { AboutComponent } from './content/about/about.component';
     AppRoutingModule,
 
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

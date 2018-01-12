@@ -1,0 +1,103 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.opinions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    @include bp-large {
+        flex-direction: row;
+        height: 100%;
+        align-items: center;
+    }
+
+    &-box {
+        height: 30rem;
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        @include bp-large {
+            flex-basis: 50%;
+            height: 100%;
+        }
+
+        &-header {
+            display: block;
+            font-weight: 400;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            margin-top: 0;
+            letter-spacing: .1rem;
+            @include bp-large {
+                font-size: 2.6rem;
+                margin-top: 2rem;
+                margin-bottom: 6rem;
+            }
+        }
+
+        &-quote {
+            display: flex;
+            flex-direction: column;
+            font-weight: 300;
+            font-size: 1rem;
+            padding: 1rem 0 4rem 0;
+            background-color: $color-main-extra-light;
+            @include bp-large {
+                box-shadow: $container-shadow-bot;
+                display: flex;
+                background-image: $background-base;
+                font-size: 1.6rem;
+                height: 100%;
+                margin: 0 2rem;
+                align-items: center;
+                padding: 0;
+            }
+        }
+
+        &-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.6rem;
+            @include bp-large {
+                box-shadow: $container-shadow-bot;
+                background-image: $background-base;
+                font-size: 1.9rem;
+                padding: 1rem;
+                margin: 0 2rem;
+            }
+            &-image {
+                background: $logo-dark no-repeat center center;
+                background-size: cover;
+                width: 8rem;
+                height: 8rem;
+                margin: 2rem 0;
+                @include bp-large {
+                    width: 14rem;
+                    height: 14rem;
+                }
+            }
+        }
+
+        &-next {
+            margin: 3rem 0 2rem 0;
+            color: $color-main-dark;
+            @include bp-large {
+                box-shadow: $container-shadow-bot;
+                background-image: $background-base;
+                width: 60%;
+                align-self: center;
+            }
+        }
+    }
+}
+
+.small {
+    height: 12rem;
+    @include bp-large {
+        height: 30rem;
+    }
+}
