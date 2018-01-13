@@ -79,6 +79,7 @@
     box-sizing: border-box;
     height: 100%;
     width: 100%;
+    
     //background-color: $color-body;
     @include bp-small {
 
@@ -90,6 +91,7 @@
     @include bp-large {
         flex-direction: row;
         margin-top: 0;
+        animation: bg-change 8s infinite;
     }
 
     &-navbar {
@@ -149,9 +151,9 @@
         order: 2;
         flex-grow: 1;
         margin: 20px 0;
+        margin-bottom: 4rem;
         opacity: 0;
-        box-shadow: $container-shadow-bot;
-        background-color: $color-main-light;
+        background-color: transparent;
         @include animation('slide-down 1.8s 3s forwards');
         @include bp-small {
             margin: 20px;
@@ -162,6 +164,7 @@
 
         @include bp-large {
             margin: 110px 2.5% 20px 2.5%; //piksele przeliczone z topbarem // !!!!!!!!!!!!!!!!!!!!!
+            margin-bottom: 0;
         }
 
         @include bp-xlarge {
@@ -222,7 +225,7 @@
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: $color-main-light;
+    background-color: $color-side-text;
     border-radius: 100%;
     -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
             animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
@@ -346,7 +349,25 @@
   }
 
 
+  @keyframes bg-change {
+    0% {
+        background: transparent;
+    }
+    25% {
+        background: #C9D6FF;
+    }
+    50% {
+        background: transparent;
+    }
+    75% {
+        background: #E2E2E2;
+    }
+    100% {
+        background: transparent;
+    }
+  }
 
+  
 
 
 

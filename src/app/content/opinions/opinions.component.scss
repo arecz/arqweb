@@ -5,20 +5,24 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-content: space-between;
     @include bp-large {
         flex-direction: row;
         height: 100%;
         align-items: center;
+        justify-content: space-between;
     }
 
     &-box {
-        height: 30rem;
-        flex-basis: 40%;
+        height: 20rem;
         display: flex;
         flex-direction: column;
         text-align: center;
         justify-content: center;
+        @include bp-medium {
+            height: 35rem;
+            flex-basis: 50%;
+            height: 100%;
+        }
         @include bp-large {
             flex-basis: 50%;
             height: 100%;
@@ -48,7 +52,6 @@
             @include bp-large {
                 box-shadow: $container-shadow-bot;
                 display: flex;
-                background-image: $background-base;
                 font-size: 1.6rem;
                 height: 100%;
                 margin: 0 2rem;
@@ -64,7 +67,6 @@
             font-size: 1.6rem;
             @include bp-large {
                 box-shadow: $container-shadow-bot;
-                background-image: $background-base;
                 font-size: 1.9rem;
                 padding: 1rem;
                 margin: 0 2rem;
@@ -83,11 +85,15 @@
         }
 
         &-next {
+            position: fixed;
+            bottom: 2rem;
+            width: 100%;
             margin: 3rem 0 2rem 0;
             color: $color-main-dark;
-            @include bp-large {
+            @include bp-medium {
+                position: relative;
+                bottom: 0;
                 box-shadow: $container-shadow-bot;
-                background-image: $background-base;
                 width: 60%;
                 align-self: center;
             }

@@ -29,14 +29,15 @@
         width: 100%;
         justify-content: space-around;
         flex-wrap: wrap;
+        margin-bottom: 5rem;
         @include bp-large {
-            
+            margin-bottom: 0rem;
             
         }
 
         &-element {
             width: 250px;
-            height: 350px;
+            height: 380px;
             background: no-repeat center center;
             background-size: cover;
             margin: 1rem;

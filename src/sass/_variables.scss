@@ -3,18 +3,19 @@ $breakpoint-tablet: "all and (min-width: 800px)";
 $breakpoint-tablet-landscape: "all and (min-width: 1280px)";
 $breakpoint-desktop: "all and (min-width: 1750px)";
 
-$color-main-dark: #7C4DFF;
-$color-main-light: #D1C4E9;
-$color-main-extra-light: #E2D5FA;
+$color-main-dark:#34495e;
+$color-main-light: #81d4fa;
+$color-main-extra-light: #ecf0f1;
 $color-text: #212121;
 $color-accent: #34495e;
 $color-body: #2c3e50;
+$color-side-text: white;
 
 $container-shadow-bot: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.1);
 $container-shadow-top:  0 -3px 8px 0 rgba(0, 0, 0, 0.2), 0 -5px 20px 0 rgba(0, 0, 0, 0.1);
 
 $logo-dark: url('../../../assets/img/logo-dark.png');
-$logo-light: url('../../../assets/img/pink.png');
+$logo-light: url('../../../assets/img/white.png');
 
 $background-work: url('../../../assets/img/math.png');
 $background-base: url('../../../assets/img/f.png');

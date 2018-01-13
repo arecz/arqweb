@@ -1,6 +1,5 @@
-<div class="home" [@zoomInLongAnimation]>
-    
-      <div class="home-box last" [@fadeInAnimation]>
+<div class="home" [@fadeInShortAnimation]>
+      <div class="home-box last" *ngIf="!messageSent">
         <form class="home-box-form" (ngSubmit) = "sendEmail(message)" #f="ngForm">
             <div class="home-box-form-mail">
               <div class="home-box-form-group small">
@@ -10,7 +9,7 @@
               <div class="home-box-form-group">
                 <label for="message" class="home-box-form-label">Wiadomość:</label>
                 <textarea class="home-box-form-control textarea" name="message" id="message" [(ngModel)] = "message.message" required placeholder="Napisz wiadomość..."></textarea>
-                <button type="submit" [disabled]="!f.valid" [ngClass]="{'valid' : f.valid && f.touched, 'invalid' : !f.valid && f.touched }" [@fadeInLongAnimation]>{{ alert }}</button>
+                <button type="submit" [disabled]="!f.valid" [ngClass]="{'valid' : f.valid && f.touched, 'invalid' : !f.valid && f.touched }" [@fadeInLongAnimation] (click)="onMessageSend()">{{ alert }}</button>
               </div>
               <div class="home-box-form-group">
                   
@@ -19,7 +18,13 @@
         </form>         
       </div>
 
-      <div class="home-box shadow first contact-box light" [@fadeInShortAnimation]>
+
+      <div class="home-box last" *ngIf="messageSent">
+          <div class="home-box-header alert" (click)="onMessageSend()" [@fadeInAnimation]>Wiadomość wysłana!</div>
+      </div>
+
+
+      <div class="home-box shadow first contact-box light" [@zoomInAnimation]>
           <div class="home-box-header">Kontakt</div>
           <div class="home-box-subheader">Zainteresowało Cię moje portfolio? Jeżeli chciałbyś mnie zatrudnić, skontaktuj się przez dostępny formularz!</div>
       </div>

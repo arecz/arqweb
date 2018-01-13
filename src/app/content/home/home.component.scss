@@ -36,22 +36,33 @@
         &-text {
             margin: 1rem;
             box-shadow: $container-shadow-bot;
-
             margin-top: 2rem;
+            @include bp-large {
+                margin-top: 0rem;
+                padding: 3rem;
+            }
+            
+
             &-content {
                 margin: 0;
                 padding: 1rem 1.6rem;
                 text-align: justify;
                 text-align-last: left;
+                text-indent: 1.5rem;
+                &::first-line {
+                    color: #500682;
+                }
                 @include bp-medium {
                     padding: 1rem 5rem; 
+                    text-indent: 3rem;
                 }
                 @include bp-large {
-                    padding: 1rem 2rem; 
+                    padding: .5rem 1rem; 
                 }
             }
             &-signature {
-                font-family: 'Pinyon Script', cursive;
+                color: #500682;
+                font-family: 'Rochester';
                 font-size: 1.6rem;
                 text-align: right;
                 margin-right: 2rem;
@@ -70,8 +81,11 @@
             flex-basis: 160px;
             background: $logo-dark no-repeat center center;
             background-size: contain;
+            animation: blink 5s infinite;
             @include bp-large {
-                flex-basis: 250px;
+                position: relative;
+                top: 10%;
+                flex-basis: 320px;
             }
             
         }
@@ -159,4 +173,21 @@ input {
 
 .light {
     background-color: $color-main-extra-light;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.90);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

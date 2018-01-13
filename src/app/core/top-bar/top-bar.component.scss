@@ -2,24 +2,41 @@
 @import '../../../sass/mixins';
 
 .topbar {
-    font-size: 1rem;
+    font-size: 1.6rem;
     display: flex;
     color: white;
-    font-family: 'Roboto Slab';
+    font-family: 'Rochester';
     height: 100%;
     background-color: $color-main-dark;
     order: 3;
     align-items: center;
-    justify-content: center;
-    padding: 1rem 3rem;
+    justify-content: space-between;
+    padding: .5rem 2rem;
     @include bp-large {
-        justify-content: flex-end;
-        font-size: 1.8rem;
+        justify-content: space-between;
+        font-size: 2.2rem;
         padding: 0 3rem;
     }
 
 
     &-brand {
-        color: $color-main-light;
+        color: $color-side-text;
     }
+
+    &-github {
+        align-self: center;
+        text-decoration: none;
+        color: $color-side-text;
+        opacity: .4;
+        transform: scale(0.9);
+        transition: opacity .5s, transform .3s;
+        @include bp-large {
+            margin-left: 5rem;
+        }
+        &:hover {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
 }

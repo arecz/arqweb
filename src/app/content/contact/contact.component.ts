@@ -16,6 +16,7 @@ export class ContactComponent {
   alert = 'Wyślij';
   title = 'Angular PHP Email Example!';
   message: IMessage = {};
+  messageSent = false;
 
   constructor(private appService: AppService) {
 
@@ -27,6 +28,10 @@ export class ContactComponent {
     }, error => {
       console.log('AppComponent Error', error);
     });
+  }
+
+  onMessageSend() {
+    this.messageSent = !this.messageSent;
   }
 
 }
