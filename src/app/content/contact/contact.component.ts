@@ -24,7 +24,13 @@ export class ContactComponent {
   }
 
   sendEmail(f) {
-    this.http.post('https://ewebarq.firebaseio.com/data.json', f).subscribe(
+    let today = new Date();
+    let yyyy = today.getFullYear();
+    let mm = today.getMonth() + 1;
+    let dd = today.getDate();
+    let date = (dd + '-' + mm + '-' + yyyy);
+
+    this.http.post('https://ewebarq.firebaseio.com/' + date + '.json', f).subscribe(
       (response) => this.messageSent = 'sent',
       (error) => this.messageSent = 'error'
     );
