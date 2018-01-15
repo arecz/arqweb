@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  appStarted = false;
 
   constructor (private router: Router) {}
 
@@ -15,7 +14,4 @@ export class AppComponent implements OnInit {
     this.router.navigate(['../']);
   }
 
-  onLoadingClick() {
-    this.appStarted = true;
-  }
 }

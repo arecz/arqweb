@@ -14,11 +14,14 @@ import { OpinionsComponent } from './content/opinions/opinions.component';
 import { MyworkComponent } from './content/mywork/mywork.component';
 import { ContactComponent } from './content/contact/contact.component';
 import { AboutComponent } from './content/about/about.component';
-import { AppService } from './app.service';
+import { NavStateDirective } from './shared/navstate.directive';
+import { TopBarStateDirective } from './shared/topbarstate.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavStateDirective,
+    TopBarStateDirective,
     NavbarComponent,
     TopBarComponent,
     MainComponent,
@@ -26,7 +29,7 @@ import { AppService } from './app.service';
     OpinionsComponent,
     MyworkComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { AppService } from './app.service';
     AppRoutingModule,
 
   ],
-  providers: [AppService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

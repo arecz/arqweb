@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { IMessage, AppService } from '../../app.service';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { fadeInShortAnimation } from '../../_animations/fade-in-short.animation';
 import { fadeInAnimation } from '../../_animations/fade-in.animation';
 import { zoomInAnimation } from '../../_animations/zoom-in.animation';
 import { zoomInLongAnimation } from '../../_animations/zoom-in-long.animation';
 import { fadeInLongAnimation } from '../../_animations/fade-in-long.animation';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-contact',
@@ -12,26 +12,30 @@ import { fadeInLongAnimation } from '../../_animations/fade-in-long.animation';
   styleUrls: ['./contact.component.scss'],
   animations: [fadeInShortAnimation, fadeInAnimation, zoomInAnimation, zoomInLongAnimation, fadeInLongAnimation]
 })
+
+@Injectable()
 export class ContactComponent {
+  message = {};
   alert = 'Wyślij';
-  title = 'Angular PHP Email Example!';
-  message: IMessage = {};
-  messageSent = false;
+  messageSent = 'pending';
 
-  constructor(private appService: AppService) {
+  constructor(private http: Http) {
 
   }
 
-  sendEmail(message: IMessage) {
-    this.appService.sendEmail(message).subscribe(res => {
-      console.log('AppComponent Success', res);
-    }, error => {
-      console.log('AppComponent Error', error);
-    });
+  sendEmail(f) {
+    this.http.post('https://ewebarq.firebaseio.com/data.json', f).subscribe(
+      (response) => this.messageSent = 'sent',
+      (error) => this.messageSent = 'error'
+    );
   }
 
-  onMessageSend() {
-    this.messageSent = !this.messageSent;
+  changeText() {
+    this.alert = 'Wysyłanie...';
+  }
+
+  onMessageClose() {
+    this.messageSent = 'pending';
   }
 
 }

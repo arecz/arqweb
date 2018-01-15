@@ -4,7 +4,10 @@
 .decoration {
     display: none;
     @include bp-large {
-        background-color: $color-main-dark;
+        background-color: #485563;  /* fallback for old browsers */
+        background-color: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+        background-color: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
         opacity: 1;
         display: block;
         position: absolute;
@@ -102,7 +105,7 @@
         z-index: 2;
         order: 1;
         box-shadow: $container-shadow-bot;
-        transform: translateY(-100px);
+        transition: top 1s;
         @include animation('slide-bars-y-down .8s .5s ease-in forwards');
 
         @include bp-small {
@@ -130,6 +133,7 @@
         flex-basis: 10%;
         order: 3;
         box-shadow: $container-shadow-top;
+        transition: top 1s, bottom 1s;
         transform: translateY(100px);
         @include animation('slide-bars-y-up .8s 1s ease-in forwards');
         @include bp-small {
@@ -367,7 +371,14 @@
     }
   }
 
-  
+
+.hide {
+    top: -15%;
+}
+
+.bar-change {
+    bottom: -15%;
+}
 
 
 

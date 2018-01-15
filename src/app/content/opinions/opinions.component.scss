@@ -5,7 +5,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 4rem;
     @include bp-large {
+        margin-bottom: 0;
         flex-direction: row;
         height: 100%;
         align-items: center;
@@ -58,6 +60,9 @@
                 align-items: center;
                 padding: 0;
             }
+            &-text {
+                padding: 0 .5rem;
+            }
         }
 
         &-author {
@@ -86,13 +91,18 @@
 
         &-next {
             position: fixed;
-            bottom: 2rem;
+            bottom: 0;
+            left: 0;
             width: 100%;
-            margin: 3rem 0 2rem 0;
             color: $color-main-dark;
+            z-index: 3;
+            @include bp-small {
+                bottom: 10%;
+            }
             @include bp-medium {
-                position: relative;
+                margin: 3rem 0 2rem 0;
                 bottom: 0;
+                position: relative;
                 box-shadow: $container-shadow-bot;
                 width: 60%;
                 align-self: center;

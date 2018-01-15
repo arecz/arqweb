@@ -1,18 +1,9 @@
-    <div class="curtain">
-        
-    </div>
 
-    <div class="loading" *ngIf="appStarted" >
-        <h1 class="loading-header">Zaczynamy?</h1>
-        <i class="fa fa-power-off loading-icon" aria-hidden="true" (click)="onLoadingClick()"></i>
-    </div>
-
-
-    <div class="base" *ngIf="!appStarted">
-        <div class="base-navbar">
+    <div class="base">
+        <div class="base-navbar" appNavState>
             <app-navbar></app-navbar>
         </div>
-        <div class="base-topbar">
+        <div class="base-topbar" appTopBarState>
             <app-top-bar></app-top-bar>
         </div>
         <div class="base-main">
