@@ -36,6 +36,7 @@ export class ContactComponent {
 
   onMessageClose() {
     this.messageSent = 'pending';
+    this.alert = 'Wyślij';
   }
 
 }

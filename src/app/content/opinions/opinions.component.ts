@@ -18,19 +18,19 @@ export class OpinionsComponent implements OnInit {
   opinions: Array<{name: string, quote: string, image: string, id: number}> = [
     {
       name: 'John Doe',
-      quote: 'Lorem ipsum dolor sit amet elo zapierdalam chrząszcz brzmi w czczinie i ogólnie polecam',
+      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum nisi et cursus consequat. Sed nec tempor libero. Phasellus molestie elementum urna.',
       image: '../../../assets/img/logo-dark.png',
       id: 1
     },
     {
       name: 'Elie Sally',
-      quote: 'Lorem bacon bacon kielbasa sit amet elo zapierdalam chrząszcz brzmi w czczinie i ogólnie polecam',
+      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum nisi et cursus consequat. Sed nec tempor libero. Phasellus molestie elementum urna.',
       image: '../../../assets/img/pink.png',
       id: 2
     },
     {
       name: 'Eleanor Really',
-      quote: 'mefedron to szmata, suki nie chcę znać... pfu, jebać!',
+      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum nisi et cursus consequat. Sed nec tempor libero. Phasellus molestie elementum urna.',
       image: '../../../assets/img/pink.png',
       id: 3
     }
