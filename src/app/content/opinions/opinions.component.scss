@@ -1,0 +1,119 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.opinions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 4rem;
+    @include bp-large {
+        margin-bottom: 0;
+        flex-direction: row;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-box {
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        @include bp-medium {
+            height: 35rem;
+            flex-basis: 50%;
+            height: 100%;
+        }
+        @include bp-large {
+            flex-basis: 50%;
+            height: 100%;
+        }
+
+        &-header {
+            display: block;
+            font-weight: 400;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            margin-top: 0;
+            letter-spacing: .1rem;
+            @include bp-large {
+                font-size: 2.6rem;
+                margin-top: 2rem;
+                margin-bottom: 6rem;
+            }
+        }
+
+        &-quote {
+            display: flex;
+            flex-direction: column;
+            font-weight: 300;
+            font-size: 1rem;
+            padding: 1rem 0 4rem 0;
+            background-color: $color-main-extra-light;
+            @include bp-large {
+                box-shadow: $container-shadow-bot;
+                display: flex;
+                font-size: 1.6rem;
+                height: 100%;
+                margin: 0 2rem;
+                align-items: center;
+                padding: 0;
+            }
+            &-text {
+                padding: 0 .5rem;
+            }
+        }
+
+        &-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.6rem;
+            @include bp-large {
+                box-shadow: $container-shadow-bot;
+                font-size: 1.9rem;
+                padding: 1rem;
+                margin: 0 2rem;
+            }
+            &-image {
+                background: $logo-dark no-repeat center center;
+                background-size: cover;
+                width: 8rem;
+                height: 8rem;
+                margin: 2rem 0;
+                @include bp-large {
+                    width: 14rem;
+                    height: 14rem;
+                }
+            }
+        }
+
+        &-next {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: $color-main-dark;
+            z-index: 3;
+            @include bp-small {
+                bottom: 10%;
+            }
+            @include bp-medium {
+                margin: 3rem 0 2rem 0;
+                bottom: 0;
+                position: relative;
+                box-shadow: $container-shadow-bot;
+                width: 60%;
+                align-self: center;
+            }
+        }
+    }
+}
+
+.small {
+    height: 12rem;
+    @include bp-large {
+        height: 30rem;
+    }
+}

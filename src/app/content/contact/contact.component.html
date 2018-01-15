@@ -1,0 +1,37 @@
+<div class="home" [@fadeInShortAnimation]>
+      <div class="home-box last" *ngIf="messageSent === 'pending'">
+        <form class="home-box-form" (submit)="sendEmail(message)" #f="ngForm">
+            <div class="home-box-form-mail">
+              <div class="home-box-form-group small">
+                <label for="mail" class="home-box-form-label">E-mail:</label>
+                <input type="text" class="home-box-form-control" name="mail" id="mail" placeholder="Podaj adres..." [(ngModel)] = "message.email" email required>
+              </div>
+              <div class="home-box-form-group">
+                <label for="message" class="home-box-form-label">Wiadomość:</label>
+                <textarea class="home-box-form-control textarea" name="message" id="message" [(ngModel)] = "message.message" required placeholder="Napisz wiadomość..."></textarea>
+                <button type="submit" [disabled]="!f.valid" [ngClass]="{'valid' : f.valid && f.touched, 'invalid' : !f.valid && f.touched }" [@fadeInLongAnimation] (click) = "changeText()"> {{ alert }}</button>
+              </div>
+              <div class="home-box-form-group">
+                  
+                </div>
+            </div>
+        </form>         
+      </div>
+
+
+      <div class="home-box last" *ngIf="messageSent === 'sent'">
+          <div class="home-box-header alert" (click)="onMessageClose()" [@fadeInAnimation]>Wiadomość wysłana!</div>
+      </div>
+
+      <div class="home-box last" *ngIf="messageSent === 'error'">
+        <div class="home-box-header warning" (click)="onMessageClose()" [@fadeInAnimation]>Wystąpił błąd połączenia, spróbuj ponownie</div>
+    </div>
+
+
+      <div class="home-box shadow first contact-box light" [@zoomInAnimation]>
+          <div class="home-box-header">Kontakt</div>
+          <div class="home-box-subheader">Zainteresowało Cię moje portfolio? Jeżeli chciałbyś mnie zatrudnić, skontaktuj się przez dostępny formularz!</div>
+      </div>
+    
+    </div>
+

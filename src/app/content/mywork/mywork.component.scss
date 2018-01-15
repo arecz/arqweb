@@ -1,0 +1,91 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.mywork {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    height: 100%;
+    @include bp-large {
+
+    }
+    &-header {
+        font-size: 2.2rem;
+        font-weight: 400;
+        box-shadow: $container-shadow-bot;
+        padding: 3rem 0;
+        margin: 0 0 2rem;
+
+        @include bp-medium {
+            margin-top: 1rem;
+            font-size: 2.8rem;
+        }
+    }
+
+    &-container {
+        
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 5rem;
+        @include bp-large {
+            margin-bottom: 0rem;
+            
+        }
+
+        &-element {
+            width: 250px;
+            height: 380px;
+            background: no-repeat center center;
+            background-size: cover;
+            margin: 1rem;
+            
+            @include bp-large {
+                width: 25%;
+                height: 350px;
+            }
+            @include bp-xlarge {
+                width: 25%;
+                height: 400px;
+            }
+
+            &-fade {
+                text-decoration: none;
+                display: block;
+                position: relative;
+                top: 0;
+                left: 0;
+                background-color: $color-main-dark;
+                opacity: 0.9;
+                width: 100%;
+                height: 100%;
+                transition: opacity .6s;
+                color: white;
+                cursor: pointer;
+                &-header {
+                    position: relative;
+                    margin: 0;
+                    top: 2.5rem;
+                    font-size: 2rem;
+                    font-weight: 300;
+                }
+                &-content {
+                    position: relative;
+                    margin: 0;
+                    top: 5rem;
+                    font-size: 1rem;
+                    line-height: 1.8rem;
+                    margin: 1rem 2rem;
+                    text-align: justify;
+                    text-align-last: center;
+                }
+                &:hover {
+                    opacity: 0;
+                }
+
+            }
+        }
+    }
+}

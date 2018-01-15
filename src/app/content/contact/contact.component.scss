@@ -1,0 +1,70 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.first {
+    order: -1
+}
+.last {
+    order: 1
+}
+
+.contact-box {
+    padding-bottom: 2rem;
+    @include bp-large {
+        padding-bottom: 0rem;
+    }
+}
+
+.textarea {
+    flex-basis: 180px;
+    resize: none;
+    padding: .5rem;
+    font-size: .9rem;
+}
+
+button {
+    width: 40%;
+    padding: 1.4rem 0;
+    margin: 2rem auto 0;
+    background-color: $color-main-dark;
+    outline: none;
+    border: 0;
+    color: white;
+    transition: background-color .5s;
+    cursor: not-allowed;
+}
+
+.small {
+    width: 100%;
+    
+    @include bp-medium {
+        width: 50%;
+        margin: 2rem auto;
+    }
+
+}
+
+.valid {
+    background-color: #2ecc71;
+    cursor: pointer;
+}
+
+.invalid {
+    background-color: #e74c3c;
+}
+
+.alert {
+    color: white;
+    background-color: #27ae60;
+    padding: 4rem;
+    cursor: pointer;
+}
+
+.warning {
+    font-size: 2.5rem;
+    color: white;
+    background-color: #e74c3c;
+    padding: 4rem;
+    cursor: pointer;
+}
+
