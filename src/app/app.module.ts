@@ -16,7 +16,6 @@ import { ContactComponent } from './content/contact/contact.component';
 import { AboutComponent } from './content/about/about.component';
 import { NavStateDirective } from './shared/navstate.directive';
 import { TopBarStateDirective } from './shared/topbarstate.directive';
-import { AppService } from './app.service';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -55,7 +54,7 @@ const firebaseConfig = {
     AngularFirestoreModule
 
   ],
-  providers: [AppService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
