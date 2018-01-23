@@ -98,14 +98,14 @@
     }
 
     &-navbar {
-
+        transform: translateY(-100px);
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 2;
         order: 1;
         box-shadow: $container-shadow-bot;
-        transition: top 1s;
+        transition: top 1.2s ease-out;
         @include animation('slide-bars-y-down .8s .5s ease-in forwards');
 
         @include bp-small {
@@ -133,7 +133,7 @@
         flex-basis: 10%;
         order: 3;
         box-shadow: $container-shadow-top;
-        transition: top 1s, bottom 1s;
+        transition: bottom 1.2s ease-out;
         transform: translateY(100px);
         @include animation('slide-bars-y-up .8s 1s ease-in forwards');
         @include bp-small {
@@ -373,11 +373,11 @@
 
 
 .hide {
-    top: -15%;
+    top: -25%;
 }
 
 .bar-change {
-    bottom: -15%;
+    bottom: -25%;
 }
 
 

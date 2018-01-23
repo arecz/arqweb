@@ -17,22 +17,16 @@ export class OpinionsComponent implements OnInit {
 
   opinions: Array<{name: string, quote: string, image: string, id: number}> = [
     {
-      name: 'John Doe',
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum nisi et cursus consequat. Sed nec tempor libero. Phasellus molestie elementum urna.',
-      image: '../../../assets/img/logo-dark.png',
+      name: 'Paweł Łukasiak - TypeIT',
+      quote: 'Sprawnie i czytelnie. Poza założeniami do strony dodał pare smaczków od siebie, co bardzo ją poprawiło. Oby tak dalej!',
+      image: '../../../assets/img/pl.jpg',
       id: 1
     },
     {
-      name: 'Elie Sally',
+      name: 'Karolina Olbryś - Paryja',
       quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum nisi et cursus consequat. Sed nec tempor libero. Phasellus molestie elementum urna.',
       image: '../../../assets/img/pink.png',
       id: 2
-    },
-    {
-      name: 'Eleanor Really',
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum nisi et cursus consequat. Sed nec tempor libero. Phasellus molestie elementum urna.',
-      image: '../../../assets/img/pink.png',
-      id: 3
     }
   ];
 

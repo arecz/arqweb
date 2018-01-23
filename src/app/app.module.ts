@@ -16,6 +16,20 @@ import { ContactComponent } from './content/contact/contact.component';
 import { AboutComponent } from './content/about/about.component';
 import { NavStateDirective } from './shared/navstate.directive';
 import { TopBarStateDirective } from './shared/topbarstate.directive';
+import { AppService } from './app.service';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyDb_e9QpkbEh0cjVva_cKwy5jpWOlgUGX0',
+  authDomain: 'ewebarq.firebaseapp.com',
+  databaseURL: 'https://ewebarq.firebaseio.com',
+  projectId: 'ewebarq',
+  storageBucket: 'ewebarq.appspot.com',
+  messagingSenderId: '469445453277'
+};
+
 
 @NgModule({
   declarations: [
@@ -37,9 +51,11 @@ import { TopBarStateDirective } from './shared/topbarstate.directive';
     FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
 
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
