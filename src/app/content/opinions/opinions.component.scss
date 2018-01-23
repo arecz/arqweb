@@ -21,7 +21,7 @@
         text-align: center;
         justify-content: center;
         @include bp-medium {
-            height: 35rem;
+            height: 30rem;
             flex-basis: 50%;
             height: 100%;
         }
@@ -47,13 +47,18 @@
         &-quote {
             display: flex;
             flex-direction: column;
-            font-weight: 300;
-            font-size: 1rem;
-            padding: 1rem 0 4rem 0;
+            height: 200px;
+            justify-content: space-around;
+            
+            
             background-color: $color-main-extra-light;
+            @include bp-medium {
+                height: 130px;
+            }
             @include bp-large {
                 box-shadow: $container-shadow-bot;
                 display: flex;
+                justify-content: flex-start;
                 font-size: 1.6rem;
                 height: 100%;
                 margin: 0 2rem;
@@ -61,7 +66,11 @@
                 padding: 0;
             }
             &-text {
-                padding: 0 .5rem;
+                padding: 0 2rem 1rem;
+                font-size: 1rem;
+                @include bp-large {
+                    font-size: 1.4rem;
+                }
             }
         }
 
@@ -69,7 +78,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 1.6rem;
+            @include bp-medium {
+                
+            }
             @include bp-large {
                 box-shadow: $container-shadow-bot;
                 font-size: 1.9rem;
@@ -79,6 +90,8 @@
             &-image {
                 background: $logo-dark no-repeat center center;
                 background-size: cover;
+                filter: contrast(1.4) saturate(1.8) sepia(.6) opacity(0.7);
+                border-radius: 100%;
                 width: 8rem;
                 height: 8rem;
                 margin: 2rem 0;
@@ -86,6 +99,10 @@
                     width: 14rem;
                     height: 14rem;
                 }
+            }
+            &-name {
+                padding-bottom: 1rem;
+                font-size: 1.4rem;
             }
         }
 

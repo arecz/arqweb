@@ -10,7 +10,7 @@ export class TopBarStateDirective {
 
     @HostListener('window:scroll')
     showNavbar(event): void {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         this.renderer.addClass(this.elRef.nativeElement, 'bar-change');
       } else {
         this.renderer.removeClass(this.elRef.nativeElement, 'bar-change');
