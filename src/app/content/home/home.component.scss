@@ -43,7 +43,9 @@
             &-content {
                 margin: 0;
                 padding: 1rem 1.6rem;
-                text-align: center;
+                text-align: left;
+
+                text-overflow: ellipsis;
                 &::first-line {
                     color: #500682;
                 }
@@ -55,13 +57,15 @@
                 }
             }
             &-signature {
-                margin: 1.5rem 0;
+                
                 color: #500682;
                 font-family: 'Rochester';
                 font-size: 1.6rem;
                 text-align: center;
                 @include bp-medium {
                     font-size: 1.8rem;
+                    text-align: right;
+                    margin: 1.5rem 2rem 1.5rem 0;
                 }
                 @include bp-large {
                     font-size: 2.2rem;
@@ -104,8 +108,6 @@
         }
 
         &-subheader {
-            text-align: justify;
-            text-align-last: left;
             width: 70%;
             margin: 0 auto;
         }
