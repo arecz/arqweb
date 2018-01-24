@@ -55,18 +55,18 @@
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: 1fr;
     grid-gap: 20px;
-    grid-template-areas: "js"
-                         "angular"
-                         "css"
-                         "node"
-                         "jquery"
+    grid-template-areas: "css"
                          "html"
+                         "js"
+                         "angular"
+                         "sass"
                          "ts"
-                         "firebase"
+                         "jquery"
+                         "node"
                          "csharp"
                          "gulp"
                          "express"
-                         "sass";
+                         "firebase";
     @include bp-medium {
         width: 100%;
         height: 100%;
