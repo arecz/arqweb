@@ -53,10 +53,13 @@
             transform: scale(1);
             outline: none;
             opacity: 0.4;
-            font-size: 2.4rem;
+            font-size: 2rem;
             color: $color-side-text;
             transition: opacity .5s, transform .3s;
             cursor: pointer;
+            @include bp-large {
+                font-size: 2.4rem; 
+            }
             &:hover {
                 opacity: 1;
                 transform: scale(1.1);

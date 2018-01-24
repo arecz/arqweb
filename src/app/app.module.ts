@@ -19,6 +19,7 @@ import { TopBarStateDirective } from './shared/topbarstate.directive';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { SkillsetComponent } from './content/skillset/skillset.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDb_e9QpkbEh0cjVva_cKwy5jpWOlgUGX0',
@@ -43,6 +44,7 @@ const firebaseConfig = {
     MyworkComponent,
     ContactComponent,
     AboutComponent,
+    SkillsetComponent,
   ],
   imports: [
     BrowserModule,
