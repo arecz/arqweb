@@ -20,7 +20,7 @@
         margin-bottom: 2rem;
         @include bp-large {
             padding: 2rem 0 0 0;
-            font-size: 4rem;
+            font-size: 3.2rem;
         }
     }
     &-text {
@@ -33,17 +33,25 @@
         line-height: 1.6rem;
         @include bp-large {
             width: 60%;
+            font-size: 1.2rem;
+            line-height: 2.4rem;
+        }
+        @include bp-xlarge {
+            width: 60%;
             font-size: 1.4rem;
-            line-height: 2.8rem;
+            line-height: 2.6rem;
         }
     }
     &-icon {
         display: block;
-        margin: 5rem auto 0;
+        margin: 1rem auto 0;
         animation: pulse .8s infinite;
         cursor: pointer;
         color: $color-main-dark;
         width: 20%;
+        @include bp-xlarge {
+            margin: 4rem auto 0;
+        }
     }
 }
 
