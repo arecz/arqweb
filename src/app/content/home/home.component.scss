@@ -140,7 +140,9 @@
                 background-color: $color-main-dark;
             }
 
-            &-control {  
+            &-control {
+
+                padding: .3rem 0;
                 border: 0;
                 outline: none;
             }

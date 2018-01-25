@@ -48,7 +48,7 @@
         animation: pulse .8s infinite;
         cursor: pointer;
         color: $color-main-dark;
-        width: 20%;
+        width: 100%;
         @include bp-xlarge {
             margin: 4rem auto 0;
         }
@@ -71,9 +71,9 @@
                          "ts"
                          "jquery"
                          "node"
+                         "git"
                          "csharp"
                          "gulp"
-                         "express"
                          "firebase";
     @include bp-medium {
         width: 100%;
@@ -83,9 +83,9 @@
         grid-template-areas: "csharp js js ts"
                              "angular js js ts"
                              "angular css css css"
-                             "angular express gulp jquery"
-                             "sass sass html html"
-                             "sass sass node firebase";
+                             "angular git gulp jquery"
+                             "sass html html html"
+                             "sass node node firebase";
     }
     &>div {
         display: flex;
@@ -132,8 +132,8 @@
 
         }
         &--8{
-            background-color: #bdc3c7;
-            grid-area: express;
+            background-color: #212121;
+            grid-area: git;
 
         }
         &--9{
@@ -144,6 +144,7 @@
         &--10{
             background-color: #ecf0f1;
             grid-area: html;
+            color: #212121 !important;
 
         }
         &--11{
@@ -204,6 +205,7 @@
 .faded {
     padding: 0 1rem !important;
     font-size: .9rem !important;
+    color: white !important;
     transform: scale(0);
     z-index: 10;
     opacity: 0;
