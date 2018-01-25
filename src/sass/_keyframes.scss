@@ -1,0 +1,164 @@
+@include keyframes(slide-down) {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+@include keyframes(slide-bars-x) {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(0) }
+}
+@include keyframes(slide-bars-y-down) {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(0) }
+}
+
+@include keyframes(slide-bars-y-up) {
+    0% { transform: translateY(100px); }
+    100% { transform: translateY(0) }
+}
+
+@include keyframes(scaling-border) {
+    0% { width: 100%; height: 100%;}
+    30% { width: 70%; height: 100%; }
+    59% { width: 1px; height: 100%; }
+    60%, 79% { background-color: $color-main-dark;}
+    80%  { width: 0px; height: 0px; background-color: transparent; transform: rotate(0deg)}
+    100% { width: 200px; height: 200px;  background-color: transparent;}
+
+
+}
+
+@include keyframes(rotate) {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+  @keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+
+  @keyframes bg-change {
+    0% {
+        background: transparent;
+    }
+    25% {
+        background: #C9D6FF;
+    }
+    50% {
+        background: transparent;
+    }
+    75% {
+        background: #E2E2E2;
+    }
+    100% {
+        background: transparent;
+    }
+  }
+
+  @keyframes grow {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.90);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes show {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.15);
+      }
+      40% {
+        transform: scale(1);
+      }
+      60% {
+        transform: scale(1.15);
+      }
+      100% {
+        transform: scale(1);
+      }
+}
+
+@keyframes grow-bg {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+        background-color: lightgrey;
+    }
+    40% {
+        transform: scale(0.8);
+        opacity: 1;
+        background-color: grey;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        background-color: normal;
+    }
+}

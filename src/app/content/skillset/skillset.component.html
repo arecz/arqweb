@@ -1,0 +1,39 @@
+<div class="loading" *ngIf="!showSkills" [@fadeInShortAnimation]>
+  <div class="loading-header">SkillSet</div>
+  <div class="loading-text">Na tej stronie wymienione są najważniejsze umiejętności, którymi dysponuję w swoim programistycznym arsenale. Wielkość kratki (lub jej kolejność na urządzeniach mobilnych) pokazuje, w jakim stopniu czuję się pewnie na danej płaszczyźnie. Po zaznaczeniu elementu wyświetlone zostaną najistotniejsze informacje o danym języku/technologii
+    <i class="fa fa-play-circle-o fa-5x loading-icon" aria-hidden="true" (click) = "onButtonClick()"></i>
+  </div>
+  
+</div>
+
+<div class="skillset" *ngIf="showSkills">
+  <div class="skillset-item--1 fade-3">jQuery</div>
+  <div class="skillset-item--2 fade-2">JavaScript</div>
+  <div class="skillset-item--3 fade-3">Node.js</div>
+  <div class="skillset-item--4 fade-2">Gulp</div>
+  <div class="skillset-item--5 fade-1">C#</div>
+  <div class="skillset-item--6 fade-4">Angular</div>
+  <div class="skillset-item--7 fade-2">Sass</div>
+  <div class="skillset-item--8 fade-3">Git</div>
+  <div class="skillset-item--9 fade-4">CSS</div>
+  <div class="skillset-item--10 fade-4">HTML</div>
+  <div class="skillset-item--11 fade-1">TypeScript</div>
+  <div class="skillset-item--12 fade-1">Firebase</div>
+  <div class="skillset-item--1 faded">Umiejętność obsługi biblioteki i pracy z jej dokumentacją, AJAX</div>
+  <div class="skillset-item--2 faded">Znajomość na stosunkowo zaawansowanym poziomie - znajomość pojęcia domknięć, 'JavaScriptowego' programowania obiektowego, 
+   wielu zagadnień z zakresu ES2015 do ES2017, umiejętność pisania asynchronicznych funkcji oraz korzystania z bibliotek, praca na tablicach i obiektach z umiejętnością wykorzystania
+   wbudowanych funkcji. Zdarzają mi się braki w znajomości teorii, jednak po krótkim przypomnieniu jestem w stanie zakodować w JS'ie naprawdę wiele :)</div>
+  <div class="skillset-item--3 faded">Obsługa NPM, podstawowy back-end, znajomość formatu JSON, REST API i praca z frameworkiem Express</div>
+  <div class="skillset-item--4 faded">Umiejętność dostosowania Gulpa do automatyzacji najpopularniejszych zadań</div>
+  <div class="skillset-item--5 faded">Podstawowa znajomość języka, uczyłem się go w celu lepszego zrozumienia programowania obiektowego</div>
+  <div class="skillset-item--6 faded">Znajomość zagadnień z zakresu SPA, obsługa Routera, HTTP, tworzenie i łączenie komponentów poprzez serwisy,
+    tworzenie dyrektyw i pipe'ów oraz umiejętność zastosowania tych wbudowanych, praca z dokumentacją, podstawowe animacje, korzystanie z subjectów i observables (rxJS),
+    bardzo podstawowa znajomość ngRX, świadomość różnic i nowości wprowadzanych w kolejnych wersjach frameworka (2/4/5)
+  </div>
+  <div class="skillset-item--7 faded">Umiejętność pisania kodu w css'owym preprocesorze, a także zastosowania zmiennych oraz mixinów</div>
+  <div class="skillset-item--8 faded">Znajomość komend i git flow w teorii, obsługa githuba, jednak brak doświadczenia w pracy zespołowej</div>
+  <div class="skillset-item--9 faded">Animacje, Flexbox, CSS-Grid, znajomość zagadnień z zakresu RWD i ogólnie pojętego designu</div>
+  <div class="skillset-item--10 faded">Znajomość znaczników semantycznych, najważniejszych atrybutów, tworzenie formularzy, tworzenie prawidłowego szkieletu strony</div>
+  <div class="skillset-item--11 faded">Znajomość zagadnień typów, tworzenie klas, obiektów, modułów i interfejsów, korzystanie z udziałem frameworka Angular 2/4/5</div>
+  <div class="skillset-item--12 faded">Obsługa bazy danych, tworzenie podstawowych funkcji, tworzenie prostych API (jak np. to obsługujące maile na portfolio)</div>
+</div>

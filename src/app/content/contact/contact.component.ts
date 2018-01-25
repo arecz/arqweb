@@ -2,10 +2,8 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { fadeInShortAnimation } from '../../_animations/fade-in-short.animation';
 import { fadeInAnimation } from '../../_animations/fade-in.animation';
 import { zoomInAnimation } from '../../_animations/zoom-in.animation';
-import { zoomInLongAnimation } from '../../_animations/zoom-in-long.animation';
 import { fadeInLongAnimation } from '../../_animations/fade-in-long.animation';
 import { Http } from '@angular/http';
-import { AppService, IMessage } from '../../app.service';
 
 
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
@@ -16,7 +14,7 @@ import 'rxjs/add/operator/map';
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
-  animations: [fadeInShortAnimation, fadeInAnimation, zoomInAnimation, zoomInLongAnimation, fadeInLongAnimation]
+  animations: [fadeInShortAnimation, fadeInAnimation, zoomInAnimation, fadeInLongAnimation]
 })
 
 @Injectable()
@@ -25,7 +23,7 @@ export class ContactComponent {
   messageSent = 'pending';
   message = {};
 
-  constructor(private appService: AppService, private afs: AngularFirestore) {
+  constructor( private afs: AngularFirestore) {
 
   }
   sendEmail(f) {

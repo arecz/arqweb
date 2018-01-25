@@ -23,9 +23,9 @@ export class OpinionsComponent implements OnInit {
       id: 1
     },
     {
-      name: 'Karolina Olbryś - Paryja',
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum nisi et cursus consequat. Sed nec tempor libero. Phasellus molestie elementum urna.',
-      image: '../../../assets/img/pink.png',
+      name: 'Mieczysław Solarz - Paryja',
+      quote: 'Podoba mi się pasja z jaką Arek podchodzi do robienia projektów. Jestem pod wrażeniem pomysłowości i uważności na szczegóły. Dzięki!',
+      image: '../../../assets/img/miet.png',
       id: 2
     }
   ];

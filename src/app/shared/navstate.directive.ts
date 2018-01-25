@@ -11,9 +11,9 @@ export class NavStateDirective {
     @HostListener('window:scroll')
     showNavbar(event): void {
       if (window.scrollY > 200) {
-        this.renderer.addClass(this.elRef.nativeElement, 'hide');
+        this.renderer.setStyle(this.elRef.nativeElement, 'top', '-25%');
       } else {
-        this.renderer.removeClass(this.elRef.nativeElement, 'hide');
+        this.renderer.removeStyle(this.elRef.nativeElement, 'top');
       }
     }
 }
