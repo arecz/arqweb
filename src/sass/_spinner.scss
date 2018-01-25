@@ -121,3 +121,13 @@
               transform: scale(1);
     }
   }
+
+  @keyframes grid-grow {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+
+  }

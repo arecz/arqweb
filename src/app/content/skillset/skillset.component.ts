@@ -15,10 +15,12 @@ import { fadeInShortAnimation } from '../../_animations/fade-in-short.animation'
 export class SkillsetComponent implements OnInit {
 
   showSkills = false;
+  animationEnded = false;
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
   onButtonClick() {
