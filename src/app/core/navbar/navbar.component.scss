@@ -70,6 +70,7 @@
 }
 
 .rotate {
-    @include animation('rotate 5s 1s infinite')
+    -webkit-text-stroke: 1px $color-main-dark;
+    @include animation('rotate 5s 1s infinite');
 }
 
