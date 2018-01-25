@@ -1,0 +1,99 @@
+@keyframes grow {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+// skills box
+
+.skills {
+   display: none;
+    @include bp-large {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        animation: grow 1s 5s forwards;
+    }
+    &>.item {
+        &1 {
+            background: url('../assets/img/skills/ts.png') no-repeat center center;    
+            background-size: cover;
+            animation-delay: 6s;    
+        }
+        &2 {
+            background: url('../assets/img/skills/js.png') no-repeat center center;  
+            background-size: cover; 
+            animation-delay: 12s;
+        }
+        &3 {
+            background: url('../assets/img/skills/angular.png') no-repeat center center;   
+            background-size: cover;
+            animation-delay: 18s;
+        }
+        &4 {
+            background: url('../assets/img/skills/node.png') no-repeat center center;   
+            background-size: cover;
+            animation-delay: 24s;
+        }
+        &5 {
+            background: url('../assets/img/skills/csharp.png') no-repeat center center;  
+            background-size: cover; 
+            animation-delay: 30s;
+        }
+        &6 {
+            background: url('../assets/img/skills/sass.png') no-repeat center center; 
+            background-size: cover; 
+            animation-delay: 36s; 
+        }
+        &7 {
+            background: url('../assets/img/skills/gulp.png') no-repeat center center;   
+            background-size: cover;
+            animation-delay: 42s;
+        }
+        &8 {
+            background: url('../assets/img/skills/css.png') no-repeat center center;   
+            background-size: cover;
+            animation-delay: 48s;
+        }
+        &9 {
+            background: url('../assets/img/skills/html.png') no-repeat center center;   
+            background-size: cover;
+            animation-delay: 54s;
+        }
+        &10 {
+            background: url('../assets/img/skills/jquery.png') no-repeat center center;   
+            background-size: cover;
+            animation-delay: 60s;
+        }
+        &11 {
+            background: url('../assets/img/skills/firebase.png') no-repeat center center;   
+            background-size: cover;
+            animation-delay: 66s;
+        }
+        &12 {
+            background: url('../assets/img/logo-dark.png') no-repeat center center;   
+            background-size: cover;
+            animation: fade-in 1s 72s forwards;
+        }
+    }
+}
+
+.skills > div {
+    opacity: 0;
+    margin: 0;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    animation: fade-in-out 6s;
+}

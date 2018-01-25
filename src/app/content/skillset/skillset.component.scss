@@ -160,44 +160,27 @@
     }
 } 
 
-@keyframes grow {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-        background-color: lightgrey;
-    }
-    40% {
-        transform: scale(0.8);
-        opacity: 1;
-        background-color: grey;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-        background-color: normal;
-    }
-}
 
 .fade-1 {
-    animation: grow 1.5s forwards ease-in-out;
+    animation: grow-bg 1.5s forwards ease-in-out;
     opacity: 0;
     transform: scale(0.8);
 }
 
 .fade-2 {
-    animation: grow 1.5s 1s forwards ease-in-out;
+    animation: grow-bg 1.5s 1s forwards ease-in-out;
     opacity: 0;
     transform: scale(0.8);
 }
 
 .fade-3 {
-    animation: grow 1.5s 2s forwards ease-in-out;
+    animation: grow-bg 1.5s 2s forwards ease-in-out;
     opacity: 0;
     transform: scale(0.8);
 }
 
 .fade-4 {
-    animation: grow 1.5s 3s forwards ease-in-out;
+    animation: grow-bg 1.5s 3s forwards ease-in-out;
     opacity: 0;
     transform: scale(0.8);
 }
@@ -216,31 +199,4 @@
         opacity: 1;
     }
     
-}
-
-@keyframes show {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-      }
-      25% {
-        transform: scale(1.1);
-      }
-      40% {
-        transform: scale(1);
-      }
-      60% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
 }

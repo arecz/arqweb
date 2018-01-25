@@ -1,5 +1,6 @@
 @import '../../../sass/variables';
 @import '../../../sass/mixins';
+@import '../../../sass/keyframes';
 
 .navbar{
     z-index: 1;
@@ -72,21 +73,3 @@
     @include animation('rotate 5s 1s infinite')
 }
 
-@include keyframes(rotate) {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-
-}
-
-
-.hide {
-    transform: translateY(100px);
-}
-
-.show {
-    transform: translateY(-100px);
-}

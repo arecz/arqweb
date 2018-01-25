@@ -11,9 +11,9 @@ export class TopBarStateDirective {
     @HostListener('window:scroll')
     showNavbar(event): void {
       if (window.scrollY > 50) {
-        this.renderer.addClass(this.elRef.nativeElement, 'bar-change');
+        this.renderer.setStyle(this.elRef.nativeElement, 'bottom', '-25%');
       } else {
-        this.renderer.removeClass(this.elRef.nativeElement, 'bar-change');
+        this.renderer.removeStyle(this.elRef.nativeElement, 'bottom');
       }
     }
 }
