@@ -41,6 +41,8 @@
             background: no-repeat center center;
             background-size: cover;
             margin: 1rem;
+            box-shadow: $container-shadow-bot;
+            
             
             @include bp-large {
                 width: 25%;
@@ -52,6 +54,7 @@
             }
 
             &-fade {
+                
                 text-decoration: none;
                 display: block;
                 position: relative;
