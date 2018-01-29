@@ -10,11 +10,11 @@
 
 .contact-box {
     padding-bottom: 2rem;
-    font-size: 1.1rem;
+    font-size: $font-small;
     line-height: 1.8rem;
     @include bp-large {
         padding-bottom: 0rem;
-        font-size: 1.3rem;
+        font-size: $font-small;
         line-height: 2rem;
     }
 }

@@ -11,7 +11,7 @@
 
     }
     &-header {
-        font-size: 2.2rem;
+        font-size: $font-large;
         font-weight: 400;
         box-shadow: $container-shadow-bot;
         padding: 3rem 0;
@@ -19,7 +19,7 @@
 
         @include bp-medium {
             margin-top: 1rem;
-            font-size: 2.8rem;
+            font-size: $font-xlarge;
         }
     }
 

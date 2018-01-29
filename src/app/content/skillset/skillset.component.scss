@@ -16,30 +16,27 @@
     
     &-header {
         
-        font-size: 2.2rem;
+        font-size: $font-large;
         margin-bottom: 2rem;
         @include bp-large {
             padding: 2rem 0 0 0;
-            font-size: 3.2rem;
+            font-size: $font-xlarge;
         }
     }
     &-text {
         position: relative;
         top: 10%;
-        font-size: .9rem;
+        font-size: $font-small;
         display: block;
         width: 80%;
         margin: 0 auto;
         line-height: 1.6rem;
         @include bp-large {
             width: 60%;
-            font-size: 1.2rem;
-            line-height: 2.4rem;
+            font-size: $font-medium;
+            line-height: 2.2rem;
         }
         @include bp-xlarge {
-            width: 60%;
-            font-size: 1.4rem;
-            line-height: 2.6rem;
         }
     }
     &-icon {

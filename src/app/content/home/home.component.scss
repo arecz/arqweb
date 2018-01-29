@@ -19,14 +19,14 @@
         flex-basis: 50%;
         flex-direction: column;
         width: 100%;
-        font-size: .9rem;
+        font-size: $font-small;
         @include bp-medium {
             height: 100%;
-            font-size: 1.2rem;
+            font-size: $font-small;
         }
         @include bp-large {
             height: 100%;
-            font-size: 1.1rem;
+            font-size: $font-small;
             line-height: 1.5rem;
         }
 
@@ -60,15 +60,14 @@
                 
                 color: #500682;
                 font-family: 'Rochester';
-                font-size: 1.6rem;
-                text-align: center;
+                font-size: $font-mediumlarge;
+                text-align: right;
+                width: 90%;
                 @include bp-medium {
-                    font-size: 1.8rem;
-                    text-align: right;
-                    margin: 1.5rem 2rem 1.5rem 0;
+                    font-size: $font-mediumlarge;
                 }
                 @include bp-large {
-                    font-size: 2.2rem;
+                    font-size: $font-large;
                 }
             }
         }
@@ -92,7 +91,7 @@
             width: 50%;
             text-align: center;
             margin: 2rem 0;
-            font-size: 2.4rem;
+            font-size: $font-large;
             opacity: 0.8;
             @include bp-medium {
                 margin-bottom: 2rem;
@@ -103,7 +102,7 @@
                 order: -1;
                 border: none;
                 height: 20%;
-                font-size: 3rem;
+                font-size: $font-xlarge;
             }
         }
 

@@ -33,12 +33,12 @@
         &-header {
             display: block;
             font-weight: 400;
-            font-size: 2.2rem;
+            font-size: $font-large;
             margin-bottom: 1rem;
             margin-top: 0;
             letter-spacing: .1rem;
             @include bp-large {
-                font-size: 2.6rem;
+                font-size: $font-xlarge;
                 margin-top: 2rem;
                 margin-bottom: 6rem;
             }
@@ -67,9 +67,9 @@
             }
             &-text {
                 padding: 0 2rem 1rem;
-                font-size: 1rem;
+                font-size: $font-small;
                 @include bp-large {
-                    font-size: 1.4rem;
+                    font-size: $font-medium;
                 }
             }
         }
